@@ -16,7 +16,7 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
 
-    # Описание кнопок
+        # Описание кнопок
 
         self.one = QtWidgets.QPushButton(self.centralwidget)
         self.one.setGeometry(QtCore.QRect(20, 330, 80, 40))
@@ -365,4 +365,4 @@ if __name__ == '__main__':
     MainWindow.show()
     sys.exit(app.exec())
 
-# этот комментарий НЕ будет доступен после оплаты подписки :(
+# этот комментарий будет доступен всегда, открытые исходники жи
