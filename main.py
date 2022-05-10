@@ -9,159 +9,118 @@ class Ui_MainWindow(object):
         self.digits_list = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
         self.operations_list = ['-', '+', 'x', '%', '÷']
 
-    def setupUi(self, MainWindow):
+    def setupButton(self, button):
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift")
+        font.setPointSize(10)
+        button.setFont(font)
+
+
+def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setFixedSize(351, 446)
         MainWindow.setStyleSheet("background-color: rgb(170, 170, 255);")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
 
-    # Описание кнопок
+        # Описание кнопок
 
         self.one = QtWidgets.QPushButton(self.centralwidget)
         self.one.setGeometry(QtCore.QRect(20, 330, 80, 40))
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift")
-        font.setPointSize(10)
-        self.one.setFont(font)
+        self.setupButton(self.one)
         self.one.setObjectName("one")
         self.one.clicked.connect(self.digit_to_screen)
 
         self.two = QtWidgets.QPushButton(self.centralwidget)
         self.two.setGeometry(QtCore.QRect(110, 330, 80, 40))
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift")
-        font.setPointSize(10)
-        self.two.setFont(font)
+        self.setupButton(self.two)
         self.two.setObjectName("two")
         self.two.clicked.connect(self.digit_to_screen)
 
         self.three = QtWidgets.QPushButton(self.centralwidget)
         self.three.setGeometry(QtCore.QRect(200, 330, 80, 40))
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift")
-        font.setPointSize(10)
-        self.three.setFont(font)
+        self.setupButton(self.three)
         self.three.setObjectName("three")
         self.three.clicked.connect(self.digit_to_screen)
 
         self.four = QtWidgets.QPushButton(self.centralwidget)
         self.four.setGeometry(QtCore.QRect(20, 280, 80, 40))
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift")
-        font.setPointSize(10)
-        self.four.setFont(font)
+        self.setupButton(self.four)
         self.four.setObjectName("four")
         self.four.clicked.connect(self.digit_to_screen)
 
         self.five = QtWidgets.QPushButton(self.centralwidget)
         self.five.setGeometry(QtCore.QRect(110, 280, 80, 40))
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift")
-        font.setPointSize(10)
-        self.five.setFont(font)
+        self.setupButton(self.five)
         self.five.setObjectName("five")
         self.five.clicked.connect(self.digit_to_screen)
 
         self.six = QtWidgets.QPushButton(self.centralwidget)
         self.six.setGeometry(QtCore.QRect(200, 280, 80, 40))
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift")
-        font.setPointSize(10)
-        self.six.setFont(font)
+        self.setupButton(self.six)
         self.six.setObjectName("six")
         self.six.clicked.connect(self.digit_to_screen)
 
         self.seven = QtWidgets.QPushButton(self.centralwidget)
         self.seven.setGeometry(QtCore.QRect(20, 230, 80, 40))
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift")
-        font.setPointSize(10)
-        self.seven.setFont(font)
+        self.setupButton(self.seven)
         self.seven.setObjectName("seven")
         self.seven.clicked.connect(self.digit_to_screen)
 
         self.eight = QtWidgets.QPushButton(self.centralwidget)
         self.eight.setGeometry(QtCore.QRect(110, 230, 80, 40))
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift")
-        font.setPointSize(10)
-        self.eight.setFont(font)
+        self.setupButton(self.eight)
         self.eight.setObjectName("eight")
         self.eight.clicked.connect(self.digit_to_screen)
 
         self.nine = QtWidgets.QPushButton(self.centralwidget)
         self.nine.setGeometry(QtCore.QRect(200, 230, 80, 40))
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift")
-        font.setPointSize(10)
-        self.nine.setFont(font)
+        self.setupButton(self.nine)
         self.nine.setStyleSheet("")
         self.nine.setObjectName("nine")
         self.nine.clicked.connect(self.digit_to_screen)
 
         self.zero = QtWidgets.QPushButton(self.centralwidget)
         self.zero.setGeometry(QtCore.QRect(20, 380, 171, 40))
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift")
-        font.setPointSize(10)
-        self.zero.setFont(font)
+        self.setupButton(self.zero)
         self.zero.setObjectName("zero")
         self.zero.clicked.connect(self.digit_to_screen)
 
-    # Кнопки операций
+        # Кнопки операций
 
         self.cleanAll = QtWidgets.QPushButton(self.centralwidget)   # C
         self.cleanAll.setGeometry(QtCore.QRect(110, 180, 80, 40))
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift")
-        font.setPointSize(10)
-        self.cleanAll.setFont(font)
+        self.setupButton(self.cleanAll)
         self.cleanAll.setObjectName("cleanAll")
         self.cleanAll.clicked.connect(self.cleaningAll)
 
         self.clean = QtWidgets.QPushButton(self.centralwidget)  # CE
         self.clean.setGeometry(QtCore.QRect(20, 180, 80, 40))
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift")
-        font.setPointSize(10)
-        self.clean.setFont(font)
+        self.setupButton(self.clean)
         self.clean.setObjectName("clean")
         self.clean.clicked.connect(self.clean_last_digit)
 
         self.addition = QtWidgets.QPushButton(self.centralwidget)   # +
         self.addition.setGeometry(QtCore.QRect(290, 330, 40, 40))
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift")
-        font.setPointSize(10)
-        self.addition.setFont(font)
+        self.setupButton(self.addition)
         self.addition.setObjectName("addition")
         self.addition.clicked.connect(self.operation)
 
         self.subtraction = QtWidgets.QPushButton(self.centralwidget)    # -
         self.subtraction.setGeometry(QtCore.QRect(290, 280, 40, 40))
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift")
-        font.setPointSize(10)
-        self.subtraction.setFont(font)
+        self.setupButton(self.subtraction)
         self.subtraction.setObjectName("subtraction")
         self.subtraction.clicked.connect(self.operation)
 
         self.multiplication = QtWidgets.QPushButton(self.centralwidget)     # * x
         self.multiplication.setGeometry(QtCore.QRect(290, 230, 40, 40))
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift")
-        font.setPointSize(10)
-        self.multiplication.setFont(font)
+        self.setupButton(self.multiplication)
         self.multiplication.setObjectName("multiplication")
         self.multiplication.clicked.connect(self.operation)
 
         self.division = QtWidgets.QPushButton(self.centralwidget)   # ÷
         self.division.setGeometry(QtCore.QRect(290, 180, 40, 40))
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift")
-        font.setPointSize(10)
-        self.division.setFont(font)
+        self.setupButton(self.division)
         self.division.setObjectName("division")
         self.division.clicked.connect(self.operation)
 
@@ -365,4 +324,4 @@ if __name__ == '__main__':
     MainWindow.show()
     sys.exit(app.exec())
 
-# этот комментарий будет доступен после оплаты подписки :(
+# этот комментарий будет доступен всегда, открытые исходники жи
